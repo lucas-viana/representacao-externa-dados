@@ -13,12 +13,6 @@ import org.apache.avro.io.DatumWriter;
 import br.edu.ifsuldeminas.mch.sd.pojos.Address;
 import br.edu.ifsuldeminas.mch.sd.pojos.Person;
 
-/**
- * Responsável pela serialização do objeto Person em arquivo, no formato
- * Apache Avro. O POJO é convertido em um GenericRecord conforme o esquema
- * person.avsc (em src/main/resources) e gravado em um container Avro
- * (DataFileWriter), que embute o próprio esquema no arquivo.
- */
 public class AvroWriter {
 
 	public static void write(Person person, String fileName) {

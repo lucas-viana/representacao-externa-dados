@@ -12,12 +12,6 @@ import org.apache.avro.io.DatumReader;
 import br.edu.ifsuldeminas.mch.sd.pojos.Address;
 import br.edu.ifsuldeminas.mch.sd.pojos.Person;
 
-/**
- * Responsável pela desserialização do objeto Person a partir do arquivo
- * Apache Avro. Como o container Avro embute o esquema, o DataFileReader
- * não precisa do person.avsc para ler o GenericRecord, que é então
- * convertido de volta para os POJOs do tutorial (Person e Address).
- */
 public class AvroReader {
 
 	public static Person read(String fileName) {
