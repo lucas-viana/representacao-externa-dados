@@ -6,10 +6,6 @@ import java.util.Date;
 import br.edu.ifsuldeminas.mch.sd.pojos.Address;
 import br.edu.ifsuldeminas.mch.sd.pojos.Person;
 
-/**
- * Teste do Protocol Buffers: gera o arquivo person.protobuf, recupera o
- * objeto e imprime os dados recuperados.
- */
 public class ProtobufMain {
 
 	private static final String FILE_NAME = "person.protobuf";

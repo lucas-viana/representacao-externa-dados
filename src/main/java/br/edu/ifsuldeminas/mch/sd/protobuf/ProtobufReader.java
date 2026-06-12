@@ -8,11 +8,6 @@ import java.util.Date;
 import br.edu.ifsuldeminas.mch.sd.pojos.Address;
 import br.edu.ifsuldeminas.mch.sd.pojos.Person;
 
-/**
- * Responsável pela desserialização do objeto Person a partir do arquivo
- * binário Protocol Buffers. A mensagem PersonProtos.Person é lida do arquivo
- * e convertida de volta para os POJOs do tutorial (Person e Address).
- */
 public class ProtobufReader {
 
 	public static Person read(String fileName) {

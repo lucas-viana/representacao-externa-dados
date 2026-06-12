@@ -7,12 +7,6 @@ import java.io.OutputStream;
 import br.edu.ifsuldeminas.mch.sd.pojos.Address;
 import br.edu.ifsuldeminas.mch.sd.pojos.Person;
 
-/**
- * Responsável pela serialização do objeto Person em arquivo, no formato
- * Protocol Buffers. O POJO é convertido para a mensagem PersonProtos.Person
- * (classe gerada pelo protoc a partir de proto/person.proto) e gravada em
- * formato binário.
- */
 public class ProtobufWriter {
 
 	public static void write(Person person, String fileName) {
