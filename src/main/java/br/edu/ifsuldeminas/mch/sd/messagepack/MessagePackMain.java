@@ -6,10 +6,7 @@ import java.util.Date;
 import br.edu.ifsuldeminas.mch.sd.pojos.Address;
 import br.edu.ifsuldeminas.mch.sd.pojos.Person;
 
-/**
- * Teste do MessagePack: gera o arquivo person.msgpack, recupera o objeto e
- * imprime os dados recuperados.
- */
+
 public class MessagePackMain {
 
 	private static final String FILE_NAME = "person.msgpack";

@@ -9,12 +9,7 @@ import org.msgpack.core.MessagePacker;
 import br.edu.ifsuldeminas.mch.sd.pojos.Address;
 import br.edu.ifsuldeminas.mch.sd.pojos.Person;
 
-/**
- * Responsável pela serialização do objeto Person em arquivo, no formato
- * MessagePack. Os campos do POJO são empacotados um a um, em ordem fixa
- * (formato sem esquema): a mesma ordem deve ser respeitada na leitura,
- * pelo MessagePackReader.
- */
+
 public class MessagePackWriter {
 
 	public static void write(Person person, String fileName) {

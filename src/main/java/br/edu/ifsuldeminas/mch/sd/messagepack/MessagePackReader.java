@@ -10,12 +10,7 @@ import org.msgpack.core.MessageUnpacker;
 import br.edu.ifsuldeminas.mch.sd.pojos.Address;
 import br.edu.ifsuldeminas.mch.sd.pojos.Person;
 
-/**
- * Responsável pela desserialização do objeto Person a partir do arquivo
- * MessagePack. Os campos são desempacotados na MESMA ordem em que foram
- * gravados pelo MessagePackWriter e os POJOs do tutorial (Person e
- * Address) são reconstruídos via construtores.
- */
+
 public class MessagePackReader {
 
 	public static Person read(String fileName) {
