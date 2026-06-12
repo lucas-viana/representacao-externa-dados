@@ -1,0 +1,13 @@
+<br.edu.ifsuldeminas.mch.sd.pojos.Person>
+  <name>Emerson Carvalho</name>
+  <cpf>060.793.477-11</cpf>
+  <birthDay>2026-06-11 02:38:27.606 UTC</birthDay>
+  <address>
+    <patio>Rua José</patio>
+    <number>20</number>
+    <neighborhood>Por do Sol</neighborhood>
+    <zipCode>37.130-000</zipCode>
+    <city>Alfenas</city>
+    <state>MG</state>
+  </address>
+</br.edu.ifsuldeminas.mch.sd.pojos.Person>

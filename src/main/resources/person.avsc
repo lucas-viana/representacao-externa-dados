@@ -1,0 +1,25 @@
+{
+  "namespace": "br.edu.ifsuldeminas.mch.sd.avro",
+  "type": "record",
+  "name": "Person",
+  "doc": "Arquivo auxiliar do Apache Avro: esquema usado para montar os GenericRecords. birthDay em milissegundos desde 01/01/1970 (epoch).",
+  "fields": [
+    { "name": "name", "type": "string" },
+    { "name": "cpf", "type": "string" },
+    { "name": "birthDay", "type": "long" },
+    { "name": "address",
+      "type": {
+        "type": "record",
+        "name": "Address",
+        "fields": [
+          { "name": "patio", "type": "string" },
+          { "name": "number", "type": "int" },
+          { "name": "neighborhood", "type": "string" },
+          { "name": "zipCode", "type": "string" },
+          { "name": "city", "type": "string" },
+          { "name": "state", "type": "string" }
+        ]
+      }
+    }
+  ]
+}

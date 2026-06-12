@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>br.edu.ifsuldeminas.mch.sd</groupId>
+	<artifactId>representacao-externa</artifactId>
+	<version>1.0.0</version>
+	<packaging>jar</packaging>
+
+	<name>Representacao Externa de Dados</name>
+	<description>
+		Serializacao e desserializacao de objetos Java (Person/Address) com
+		Serializable, XML (XStream), JSON (json-io), Protocol Buffers,
+		Apache Avro e MessagePack.
+	</description>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.release>17</maven.compiler.release>
+	</properties>
+
+	<dependencies>
+		<!-- Protocol Buffers (mesma versao do protoc usado para gerar PersonProtos) -->
+		<dependency>
+			<groupId>com.google.protobuf</groupId>
+			<artifactId>protobuf-java</artifactId>
+			<version>3.25.5</version>
+		</dependency>
+
+		<!-- Apache Avro -->
+		<dependency>
+			<groupId>org.apache.avro</groupId>
+			<artifactId>avro</artifactId>
+			<version>1.11.4</version>
+		</dependency>
+		<!-- Avro usa SLF4J; o binding "nop" evita avisos no console -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-nop</artifactId>
+			<version>1.7.36</version>
+		</dependency>
+
+		<!-- MessagePack -->
+		<dependency>
+			<groupId>org.msgpack</groupId>
+			<artifactId>msgpack-core</artifactId>
+			<version>0.9.8</version>
+		</dependency>
+
+		<!-- XML - XStream (parte do tutorial base) -->
+		<dependency>
+			<groupId>com.thoughtworks.xstream</groupId>
+			<artifactId>xstream</artifactId>
+			<version>1.4.21</version>
+		</dependency>
+
+		<!-- JSON - json-io (parte do tutorial base) -->
+		<dependency>
+			<groupId>com.cedarsoftware</groupId>
+			<artifactId>json-io</artifactId>
+			<version>4.14.0</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<!-- Copia todas as bibliotecas (.jar) para a pasta lib/ na fase package,
+			     atendendo ao item "Bibliotecas utilizadas" da entrega -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>copiar-bibliotecas</id>
+						<phase>package</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.basedir}/lib</outputDirectory>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>

@@ -1,0 +1,29 @@
+// Arquivo auxiliar do Protocol Buffers: define o "contrato" (esquema) das
+// mensagens. A partir dele o compilador protoc gera a classe Java
+// PersonProtos (pacote br.edu.ifsuldeminas.mch.sd.protobuf).
+//
+// Comando usado para gerar (a partir da raiz do projeto):
+//   protoc --proto_path=proto --java_out=src/main/java proto/person.proto
+syntax = "proto3";
+
+package sd;
+
+option java_package = "br.edu.ifsuldeminas.mch.sd.protobuf";
+option java_outer_classname = "PersonProtos";
+
+message Address {
+  string patio = 1;
+  int32 number = 2;
+  string neighborhood = 3;
+  string zip_code = 4;
+  string city = 5;
+  string state = 6;
+}
+
+message Person {
+  string name = 1;
+  string cpf = 2;
+  // Data de nascimento em milissegundos desde 01/01/1970 (epoch)
+  int64 birth_day = 3;
+  Address address = 4;
+}
